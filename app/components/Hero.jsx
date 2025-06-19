@@ -9,7 +9,7 @@ export default function HeroSection() {
   useEffect(() => {
     // Add animation class after component mounts
     if (secondCircleRef.current) {
-      secondCircleRef.current.classList.add('animate-move-then-spin');
+      secondCircleRef.current.classList.add("animate-move-then-spin");
     }
   }, []);
 
@@ -21,20 +21,13 @@ export default function HeroSection() {
         <div className="absolute bottom-1/4 right-1/4 w-64 h-64 border border-black/20 dark:border-white/10 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-black/20 dark:border-white/10 rounded-full animate-[spin_25s_linear_infinite]" />
       </div> */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Slower clockwise rotation */}
-         <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-black/20 dark:border-white/10 rounded-full animate-spin-slow" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 border border-black/20 dark:border-white/10 rounded-full animate-spin"></div>
 
-      {/* Second circle - special animation */}
-      <div
-        ref={secondCircleRef}
-        className="absolute w-64 h-64 border border-black/20 dark:border-white/10 rounded-full opacity-0"
-      />
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 border border-black/20 dark:border-white/10 rounded-full animate-spin-slow-reverse"></div>
 
-      {/* Third circle - simple spin */}
-      <div className="absolute top-1/2 left-1/2 w-96 h-96 border border-black/20 dark:border-white/10 rounded-full animate-spin-medium" />
-    </div>
-      
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 border border-black/20 dark:border-white/10 rounded-full animate-spin -translate-x-1/2 -translate-y-1/2"></div>
+      </div>
 
       {/* Main content */}
       <main className="relative z-10">
@@ -82,7 +75,7 @@ export default function HeroSection() {
             </div>
 
             {/* Hero image */}
-            <div className="relative h-[520px] w-full max-w-[520px] flex justify-center items-center opacity-0 translate-y-4 animate-fade-in-up">
+            <div className="relative h-[520px] w-full max-w-[520px] flex justify-center items-center ">
               <div className="absolute -right-20 md:-right-24 -top-20 h-[300px] w-[480px] md:h-[600px] md:w-[780px] rounded-full blur-[150px]" />
               <div className="relative w-full h-full p-[5px] rounded-2xl bg-gradient-to-tr from-[#0EA5E9] via-[#E879F9] to-[#FACC15] transition-transform hover:scale-[1.01]">
                 <div className="relative w-full h-full rounded-[12px] overflow-hidden">

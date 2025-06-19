@@ -3,8 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ModeToggle } from "./ModeToggle";
-// import ThemeDropdown from "./ThemeDropdown";
-// import useThemeStore from '../store/useThemeStore';
+
 
 export default function Header() {
   // const { theme, toggleTheme } = useThemeStore();

@@ -3,6 +3,23 @@
 @tailwind utilities;
 
 @custom-variant dark (&:is(.dark *));
+.gradient-text-new {
+  background-image: linear-gradient(90deg, #8B5CF6, #EC4899, #F59E0B);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% }
+  100% { background-position: 200% }
+}
+
+.animate-rainbow {
+  animation: rainbow 4s linear infinite;
+}
+
 
 body {
   @apply bg-black text-white;

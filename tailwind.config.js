@@ -18,6 +18,8 @@ export const theme = {
       'spin-slow-reverse': 'spin 15s linear infinite reverse',
       'spin-medium': 'spin 25s linear infinite',
       'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+      'spin-slow-reverse': 'spin 15s linear infinite reverse',
+
 
     },
   },
