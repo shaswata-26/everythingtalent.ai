@@ -150,10 +150,7 @@ export default function ThriveSection() {
         style={{ zIndex: "40 !important" }}
         className="absolute -bottom-[41px] left-0 !z-40 h-[100px] w-[100%] bg-gradient-to-br from-[#FDF4FB] via-[#FDF4FB] to-[#FDF4FB] blur-[40px] dark:from-black dark:via-slate-900 dark:to-slate-950"
       ></div>
-      {/* <div
-        style={{ zIndex: '40 !important' }}
-        className="absolute -top-[41px] left-0 !z-40 h-[100px] w-[100%] bg-gradient-to-br from-[#FCECF9] via-[#F7E6FA] to-[#EFE2FD] blur-[40px] dark:from-black dark:via-slate-900 dark:to-slate-950"
-      ></div> */}
+   
     </section>
   );
 }

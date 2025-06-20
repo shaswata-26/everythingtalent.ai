@@ -34,7 +34,7 @@ const timelineData = [
       "Everything AI was officially launched! Released initial AI-powered automation features.",
     stats: [
       { value: "10+", label: "features" },
-      { value: "1M+", label: "dataProcessed" },
+      { value: "1M+", label: "data processed" },
       { value: "1K+", label: "clients" },
     ],
     imageSrc: "/2022.webp",
@@ -75,8 +75,8 @@ export default function JourneySection() {
 function TimelineItem({ year, title, description, stats, imageSrc }) {
   return (
     <div className="flex items-center justify-center h-full px-4">
-      <div className="flex flex-col relative h-full w-full max-w-7xl mx-auto rounded-2xl overflow-hidden shadow-xl bg-gradient-to-br from-slate-200 via-[#F5F3FC] to-[#e9d5ff00] dark:from-black dark:via-slate-900 dark:to-slate-950">
-        <div className="flex flex-col md:flex-row h-full p-8 gap-12">
+      <div className="flex flex-col relative h-full w-full max-w-7xl mx-auto rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-md transition">
+        <div className="flex flex-col md:flex-row h-full p-6 gap-10 md:gap-12">
           {/* Text content */}
           <div className="w-full md:w-[45%] space-y-6">
             <div>
@@ -107,12 +107,12 @@ function TimelineItem({ year, title, description, stats, imageSrc }) {
 
           {/* Image content */}
           <div className="relative w-full md:w-[85%] h-full rounded-xl overflow-hidden hidden md:block">
-            <div className="w-full h-full transform scale-[1.1]">
+            <div className="relative w-full h-[350px] md:h-full transform scale-[1.1]">
               <Image
                 alt={`${year} illustration`}
                 src={imageSrc}
                 fill
-                className="object-cover"
+                className="object-cover rounded-md"
                 sizes="100vw"
                 priority={false}
               />

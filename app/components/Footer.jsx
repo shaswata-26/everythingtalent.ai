@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
+import FloatingText from "./FloatingText";
 
 export default function Footer() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -38,6 +39,8 @@ export default function Footer() {
   };
 
   const handleMouseMove = (e) => {
+    const layers = [1, 0.4, 0.2, 0.15, 0.1, 0.05, 0.02];
+
     if (!isDragging) return;
 
     const newX = e.clientX - startPos.x;
@@ -355,70 +358,8 @@ export default function Footer() {
         </section>
       </section>
       <section className="mx-auto md:container px-4 sm:px-6 ">
-        <div
-          ref={dragRef}
-          className="absolute bottom-60 max-lg:bottom-40 right-20 hidden sm:block cursor-grab select-none"
-          style={{
-            transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
-            transition: isDragging
-              ? "none"
-              : "transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28)",
-            filter: isDragging
-              ? "none"
-              : "drop-shadow(0 0 8px rgba(177, 26, 255, 0.3))",
-            backfaceVisibility: "hidden",
-            perspective: "1000px",
-          }}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
-        >
-          <div className="w-[600px] h-[250px] flex items-center justify-center p-4 mb-4">
-            <div className="relative w-full max-w-2xl h-64 rounded-lg">
-              {/* Optimized gradient text layers with will-change */}
-              {layers.map((layer, index) => (
-                <div
-                  key={index}
-                  className="absolute inset-0 flex items-center justify-center"
-                  style={{
-                    transform: `translate3d(${index * 2}px, ${index * 2}px, 0)`,
-                    zIndex: layer.zIndex,
-                    willChange: "transform",
-                    backfaceVisibility: "hidden",
-                  }}
-                >
-                  <h1
-                    className="text-2xl md:text-3xl font-bold tracking-widest text-transparent bg-clip-text"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(90deg, #B11AFF 0%, #FF689F 100%)",
-                      opacity: layer.opacity,
-                      WebkitBackgroundClip: "text",
-                      textShadow: "none",
-                      willChange: "transform",
-                    }}
-                  >
-                    EVERYTHINGTALENT.AI
-                  </h1>
-                </div>
-              ))}
+      {/* <FloatingText /> */}
 
-              {/* Grid background with optimized rendering */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="w-full h-full grid grid-cols-40 grid-rows-24 rounded-lg overflow-hidden">
-                  {[...Array(960)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="hover:bg-purple-500/10 transition-colors"
-                      style={{ willChange: "background-color" }}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
         <div className="sm:flex sm:items-center sm:justify-center">
           <span className="text-sm sm:text-center text-gray-400">
             © 2025
