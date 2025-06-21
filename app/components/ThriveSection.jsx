@@ -146,11 +146,11 @@ export default function ThriveSection() {
       </div>
 
       {/* Blur effects */}
-      <div
+      {/* <div
         style={{ zIndex: "40 !important" }}
         className="absolute -bottom-[41px] left-0 !z-40 h-[100px] w-[100%] bg-gradient-to-br from-[#FDF4FB] via-[#FDF4FB] to-[#FDF4FB] blur-[40px] dark:from-black dark:via-slate-900 dark:to-slate-950"
       ></div>
-   
+    */}
     </section>
   );
 }

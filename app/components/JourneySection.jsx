@@ -83,7 +83,9 @@ function TimelineItem({ year, title, description, stats, imageSrc }) {
               <span className="text-sm font-medium text-purple-600 dark:text-purple-400">
                 {title}
               </span>
-              <h2 className="text-3xl font-bold mt-1">{year}</h2>
+              <h2 className="text-3xl font-bold mt-1 dark:text-amber-100">
+                {year}
+              </h2>
             </div>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
               {description}
@@ -104,20 +106,17 @@ function TimelineItem({ year, title, description, stats, imageSrc }) {
               ))}
             </div>
           </div>
-
           {/* Image content */}
-          <div className="relative w-full md:w-[85%] h-full rounded-xl overflow-hidden hidden md:block">
-            <div className="relative w-full h-[350px] md:h-full transform scale-[1.1]">
-              <Image
-                alt={`${year} illustration`}
-                src={imageSrc}
-                fill
-                className="object-cover rounded-md"
-                sizes="100vw"
-                priority={false}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
-            </div>
+          <div className="relative w-full md:w-[85%] aspect-[16/9] rounded-xl overflow-hidden hidden md:block">
+            <Image
+              alt={`${year} illustration`}
+              src={imageSrc}
+              fill
+              className="object-cover rounded-md"
+              sizes="100vw"
+              priority={false}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
           </div>
         </div>
       </div>
