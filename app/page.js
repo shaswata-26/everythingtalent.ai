@@ -9,19 +9,22 @@ import ThriveSection from "./components/ThriveSection";
 import ValuesSection from "./components/ValuesSection";
 
 export default function Home() {
-    console.log("Page component rendered");
+  console.log("Page component rendered");
 
   return (
-    <main className="overflow-auto">
-      <Header />
-      <Hero/>
-      <CoreValuesSection/>
-      <StorySection/>
-      <ValuesSection/>
-      <ThriveSection/>
-      <JourneySection/>
-      <MissionSection/>
-      <Footer />
+    <main className="w-full  mx-auto overflow-auto container ">
+
+      
+        <Header />
+        <Hero />
+        <CoreValuesSection />
+        <StorySection />
+        <ValuesSection />
+        <ThriveSection />
+        <JourneySection />
+        <MissionSection />
+        <Footer />
+   
 
     </main>
   );

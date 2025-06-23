@@ -46,8 +46,8 @@ export default function JourneySection() {
     <section className="relative pb-28 bg-gradient-to-tr from-[#ffeffa] via-[#fff5fc] to-[#fcf4f9] dark:from-[#0a1020] dark:via-[#05080e] dark:to-[#0e1526]">
       {/* Header Section */}
       <div className="w-full max-w-7xl mx-auto text-center px-4">
-        <div className="mt-10 mb-8">
-          <h1 className="text-5xl font-bold tracking-tight">
+        <div className=" mb-8">
+          <h1 className="text-5xl text-black font-bold tracking-tight dark:text-white">
             Our{" "}
             <span className="bg-gradient-to-r from-[#ec0bc8] via-[#5bb2f6] to-[#f6c436] bg-clip-text text-transparent">
               Journey
