@@ -13,10 +13,12 @@ import { ChevronDown, ChevronRight, Menu, Moon, Sun } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 z-50 w-full bg-slate-100 dark:bg-slate-950 lg:bg-transparent dark:lg:bg-transparent mt-3">
-      <nav className="flex h-14 items-center justify-between px-4 md:container md:px-8">
+    <header className="  fixed top-0 z-50 w-full bg-slate-100 dark:bg-slate-950 lg:bg-transparent dark:lg:bg-transparent mt-3">
+      <nav
+        className="flex h-14 items-center justify-center px-4 md:container md:px-8"
+      >
         {/* Logo Section */}
-        <div className="flex items-center gap-4">
+        <div className="flex w-full items-center gap-4">
           {/* Mobile Logo */}
           <div className="block lg:hidden border rounded-lg shadow-lg dark:border-slate-300/30 border-slate-700/30">
             <Link href="/">
@@ -65,7 +67,10 @@ export default function Header() {
               </NavigationMenuItem>
               <div className="h-[30px] w-px bg-slate-700/30 dark:bg-slate-300/30" />
               <NavigationMenuItem>
-                <Link href="/" className="text-sm text-slate-950 dark:text-slate-50">
+                <Link
+                  href="/"
+                  className="text-sm text-slate-950 dark:text-slate-50"
+                >
                   Home
                 </Link>
               </NavigationMenuItem>

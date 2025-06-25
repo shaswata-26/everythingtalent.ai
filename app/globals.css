@@ -162,3 +162,21 @@ body {
   }
 }
 
+.gradient-border {
+  position: relative;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -2px;
+  border-radius: inherit;
+  background: linear-gradient(121.31deg, #8B5CF6 -12.16%, #EC4899 48.37%, #F59E0B 112.89%);
+}

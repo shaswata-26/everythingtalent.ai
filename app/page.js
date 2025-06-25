@@ -12,20 +12,26 @@ export default function Home() {
   console.log("Page component rendered");
 
   return (
-    <main className="w-full  mx-auto overflow-auto container ">
+    // <main className="w-full  m-auto overflow-auto container ">
 
-      
+
+
+
+    // </main>
+
+    <>
+
+      <div className="w-full max-w-7xl mx-auto px-4 container">
         <Header />
-        <Hero />
-        <CoreValuesSection />
-        <StorySection />
-        <ValuesSection />
-        <ThriveSection />
-        <JourneySection />
-        <MissionSection />
-        <Footer />
-   
-
-    </main>
+      </div>
+      <Hero />
+      <CoreValuesSection />
+      <StorySection />
+      <ValuesSection />
+      <ThriveSection />
+      <JourneySection />
+      <MissionSection />
+      <Footer />
+    </>
   );
 }

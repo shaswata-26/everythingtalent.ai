@@ -303,49 +303,67 @@ const MissionSection = () => {
           </div>
         </div>
       </div>
-      <div className="absolute inset-0 bg-slate-300 dark:bg-transparent opacity-20"></div>
 
+      {/* Mission Card Component */}
       <div className="flex justify-center items-center px-4 pb-10 lg:pb-32">
-        {/* Gradient border wrapper */}
-        <div className="relative w-full sm:w-3/4 md:w-2/3 lg:w-1/2 max-w-5xl mt-20 sm:mt-28 md:mt-40 rounded-3xl p-[2px] bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#F59E0B] ">
-          {/* Inner card with transparent background */}
-          <div className="relative rounded-3xl overflow-hidden h-[400px] flex items-center justify-center transform transition-all duration-700 ease-out">
-            {/* Transparent gradient background */}
-
-            <div className="absolute inset-0 bg-gradient-to-r from-[#e9d5ff] to-[#bfdbfe]  dark:from-[#1e0e24] dark:to-[#26161b] bg-opacity-60 dark:bg-opacity-60 rounded-3xl"></div>
-
-            {/* Content above background */}
-            <div className="relative flex flex-col items-center justify-center text-center h-full px-6 sm:px-10 md:px-12 py-16 sm:py-20 md:py-24 gap-4 sm:gap-6">
+        {/* Gradient Border Wrapper */}
+        <div
+          className="
+    w-full sm:w-3/4 md:w-2/3 lg:w-1/2
+    max-w-5xl
+    p-[2px] /* Border width */
+    rounded-3xl
+    mt-20 sm:mt-28 md:mt-40
+    border-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#F59E0B]
+    group
+  "
+        >
+          {/* Inner Card Container */}
+          <div
+            className="
+      relative
+      w-full
+      h-[400px]
+      rounded-3xl
+      px-6 sm:px-10 md:px-12
+      py-16 sm:py-20 md:py-24
+      overflow-hidden
+      flex justify-center items-center
+      bg-gradient-to-r from-[#e9d5ff] to-[#bfdbfe] bg-opacity-60
+      dark:bg-gradient-to-r dark:from-[#1e0e24] dark:to-[#26161b] dark:bg-opacity-60
+      opacity-80 hover:opacity-100
+      transition-all duration-700 ease-out
+    "
+          >
+            {/* Content Container - Keep everything below exactly the same */}
+            <div className="flex flex-col items-center text-center gap-4 sm:gap-6 max-w-5xl">
               <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[40px] font-extrabold text-[#92a3b8] group-hover:text-white leading-tight">
-                <span className="text-slate-900 dark:text-white dark:group-hover:text-slate-50">
+                <span className="font-bold text-slate-900 dark:text-white dark:group-hover:text-slate-50">
                   Join Our
                 </span>
-                <span className="gradient-text-new bg-clip-text text-transparent ml-2">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#8B5CF6] via-[#EC4899] to-[#F59E0B] ml-2">
                   Mission
                 </span>
               </h2>
 
-              <p className="text-lg sm:text-xl text-slate-700 dark:text-[#92a3b8] group-hover:text-gray-950 dark:group-hover:text-gray-300">
+              <p className="text-lg sm:text-xl md:text-xl text-slate-700 dark:text-[#92a3b8] dark:group-hover:text-gray-300 group-hover:text-gray-950">
                 Help us reimagine the future of hiring in the tech industry.
               </p>
 
-              <button className="relative inline-flex items-center justify-center h-11 px-8 text-md font-medium text-white dark:text-black bg-black dark:bg-white rounded-md transition-all duration-500 ease-in-out hover:scale-[1.02] group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 ring-offset-background disabled:opacity-50 disabled:pointer-events-none">
+              <button className="relative inline-flex items-center justify-center h-11 px-8 rounded-md text-md font-medium text-white dark:text-black bg-black dark:bg-white border border-white transition-all duration-500 ease-in-out hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 group/button">
                 <span className="relative z-10">Start Here</span>
-
                 <svg
-                  className="ml-2 -mr-1 w-5 h-5 transition group-hover:translate-x-1"
+                  className="ml-2 -mr-1 w-5 h-5 transition-transform group-hover/button:translate-x-1"
                   fill="currentColor"
                   viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     fillRule="evenodd"
                     d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
                     clipRule="evenodd"
-                  />
+                  ></path>
                 </svg>
-
-                {/* Gradient glow effect */}
-                <span className="absolute bottom-[-20%] left-1/2 -translate-x-1/2 w-3/5 h-1/5 bg-[linear-gradient(90deg,#8B5CF6,#EC4899,#F59E0B)] bg-[length:200%] blur-lg opacity-75 transition-opacity duration-1000 group-hover:opacity-100 animate-rainbow" />
               </button>
             </div>
           </div>
